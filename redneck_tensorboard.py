@@ -9,7 +9,7 @@ args = parser.parse_args()
 vis = visdom.Visdom()
 def redneck_tensorboard(run_id, windows, xlim=None):
     try:
-        win = [0,0,0]
+        win = [0,0,0,0,0]
         with open(str(run_id)+'.log') as f:
             contents = f.readlines()
         new = [contents[i:i+5] for i  in range(0, len(contents), 5)][:-1]
